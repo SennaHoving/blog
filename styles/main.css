@@ -1,9 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+::root {
+    --media-breakpoint-s: 480px; 
+    --media-breakpoint-m: 768px; 
+    --media-breakpoint-l: 1200px; 
+    --media-breakpoint-xl: 1440px; 
+}
+
 body {
     background-color: white; 
+    font-family: "inter";
 }
 
 body {
     padding: 0; 
+    margin: 0; 
+}
+
+/* MARK: Nav */ 
+body nav {
+    position: absolute; 
+    top: 4rem; 
+    width: 100%; 
+
+    @media (max-width: 1200px) {
+        right: 4rem; 
+        width: auto; 
+    }
+}
+
+nav ul {
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+
+    display: flex; 
+    flex-direction: row; 
+    gap: 10vw; 
+    justify-content: center;
+
+    @media (max-width: 1200px) {
+        display: none; 
+    }
+}
+
+nav ul a {
+    text-decoration: none;
+    color: black; 
+    opacity: 0.5;
+
+    font-size: 1.2em;
+}
+
+.active-page {
+    opacity: 1;
+}
+
+/* MARK: Title */
+body main > div {
+    position: fixed; 
+    bottom: 4rem; 
+    left: 4rem; 
+
+    display: flex; 
+    flex-direction: column; 
+    gap: 0.5em;
+
+    @media (max-width: 1200px) {
+        position: fixed; 
+        top: 4rem; 
+        left: 4rem; 
+
+        display: flex; 
+        flex-direction: column; 
+        gap: 0.5em;
+    }
+} 
+
+body main > div h1, body main > div p {
+    font-size: 1.3em; 
+    font-weight: 400; 
+
     margin: 0; 
 }
 
@@ -17,33 +95,107 @@ body {
     align-items: center; 
 }
 
+.gallery h2 {
+    position: fixed; 
+    bottom: 4rem; 
+    right: 4rem; 
+
+    margin: 0; 
+    padding: 0; 
+
+    font-family: "syne";
+    font-size: 2.5em;
+
+    @media (max-width: 768px)  {
+        font-size: 1.75em; 
+    }
+
+    @media (max-width: 480px)  {
+        font-size: 1.25em; 
+    }
+}
+
 .gallery div {
     position: absolute;
     top:50%; left:50%;
 
     perspective: 1050px;
+    transform-style:preserve-3d;
 }
 
 .gallery img {
     position: absolute; 
     top: calc(25vh / -2); 
-    left: calc(30vw / -2); 
+    left: calc(60vw / -2); 
 
-    width: 30vw; 
-    height: 25vh; 
-    object-fit: cover;
+    width: 60vw; 
+    object-fit: contain;
+
+    transition: transform .6s cubic-bezier(.22,.61,.36,1), opacity 0.5s;
+    backface-visibility: hidden;
+
+    user-select: none;
+
+    /* temp */ 
+    /* background-color: grey;  
+    height: 25vh; */
+
+    @media (min-width: 480px) {
+        width: 50vw; 
+        left: calc(50vw / -2); 
+    }
+
+    @media (min-width: 768px) {
+        width: 37.5vw; 
+        left: calc(37.5vw / -2); 
+    }
+
+    @media (min-width: 1200px) {
+        width: 25vw; 
+        left: calc(25vw / -2); 
+    }
+
+    @media (min-width: 1600px) {
+        width: 20vw; 
+        left: calc(20vw / -2); 
+    }
+}
+
+.gallery .active {
+    box-shadow:0 30px 60px -25px rgba(0,0,0,.45);
 }
 
 .gallery img:nth-of-type(1) {
-    transform: translateX(-1080px) translateZ(220px) rotateY(34deg); 
+    transform: translateX(-1300px) translateZ(400px) rotateY(34deg); 
+    opacity: 0;
 }
 
 .gallery img:nth-of-type(2) {
-    transform: translateX(-700px) translateZ(150px) rotateY(48deg); 
+    transform: translateX(-850px) translateZ(370px) rotateY(48deg); 
+
+    @media (min-width: 1200px) {
+        transform: translateX(-40vw) translateZ(370px) rotateY(48deg); 
+    }
+
+    @media (min-width: 2200px) {
+        transform: translateX(-42vw) translateZ(370px) rotateY(48deg); 
+    }
 }
 
 .gallery img:nth-of-type(3) {
-    transform: translateX(-360px) translateZ(-60px) rotateY(54deg); 
+    transform: translateX(-60vw) translateZ(-60px) rotateY(54deg); 
+    
+    @media (min-width: 480px) {
+        transform: translateX(-50vw) translateZ(-60px) rotateY(54deg); 
+    }
+
+    @media (min-width: 768px) {
+        transform: translateX(-40vw) translateZ(-60px) rotateY(54deg); 
+    }
+
+    @media (min-width: 1200px) {
+        transform: translateX(-25vw) translateZ(-60px) rotateY(54deg); 
+    }
 }
 
 .gallery img:nth-of-type(4) {
@@ -51,75 +203,34 @@ body {
 }
 
 .gallery img:nth-of-type(5) {
-    transform: translateX(360px) translateZ(-60px) rotateY(-54deg); 
+    transform: translateX(60vw) translateZ(-60px) rotateY(-54deg); 
+
+    @media (min-width: 480px) {
+        transform: translateX(50vw) translateZ(-60px) rotateY(-54deg); 
+    }
+
+    @media (min-width: 768px) {
+        transform: translateX(40vw) translateZ(-60px) rotateY(-54deg); 
+    }
+
+    @media (min-width: 1200px) {
+        transform: translateX(25vw) translateZ(-60px) rotateY(-54deg); 
+    }
 }
 
 .gallery img:nth-of-type(6) {
-    transform: translateX(700px) translateZ(150px) rotateY(-48deg); 
+    transform: translateX(850px) translateZ(370px) rotateY(-48deg); 
+
+    @media (min-width: 1200px) {
+        transform: translateX(40vw) translateZ(370px) rotateY(-48deg); 
+    }
+
+    @media (min-width: 2200px) {
+        transform: translateX(42vw) translateZ(370px) rotateY(-48deg); 
+    }
 }
 
 .gallery img:nth-of-type(7) {
-    transform: translateX(1080px) translateZ(220px) rotateY(-34deg); 
+    transform: translateX(1300px) translateZ(400px) rotateY(-34deg); 
+    opacity: 0;
 }
-
-
-
-/* .gallery {
-    position: relative; 
-    height: 100vh; 
-    width: 100vw; 
-    display: flex;
-    align-items: center;
-
-    overflow-x: scroll; 
-    overflow-y: hidden; 
-    scrollbar-width: none;
-}
-
-.gallery::-webkit-scrollbar {
-    display: none;
-}
-
-.gallery div {
-    width: max-content; 
-    display: flex; 
-    flex-direction: row;
-    gap: 10vw;
-    flex: 0 0 auto;
-}
-
-.gallery img {
-    object-fit: cover;  
-    height: 25vh; 
-    width: 40vw;
-
-    flex: 0 0 auto; 
-} */
-
-/* .gallery {
-    position: relative; 
-    overflow: hidden; 
-    height: 100vh; 
-
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-
-    perspective: 1050px;
-}
-
-.gallery div {
-    display: flex; 
-    flex-direction: row; 
-
-    transform-style:preserve-3d;
-}
-
-.gallery img {
-    height: 50vh; 
-    width: 50vw; 
-
-    object-fit: cover;
-    user-select:none;
-    transition:transform .6s cubic-bezier(.22,.61,.36,1), opacity .5s ease
-} */
