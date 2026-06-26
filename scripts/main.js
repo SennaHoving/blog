@@ -1,4 +1,4 @@
-const allProjects = document.querySelectorAll(".gallery img");
+const allProjects = document.querySelectorAll(".gallery a");
 const projectTitle = document.querySelector(".gallery h2"); 
 const totalProjects = allProjects.length  
 const half = Math.floor(totalProjects / 2)
@@ -33,11 +33,21 @@ const layouts = {
     xl: {                                     // >= 2200px
         0: { x: "0px",    z: -300, rotateY: 0  },
         1: { x: "25vw",   z: -60,  rotateY: 54 },
-        2: { x: "42vw",   z: 370,  rotateY: 48 },
+        2: { x: "45vw",   z: 370,  rotateY: 48 },
+        3: { x: "1300px", z: 400,  rotateY: 34 },
+    },
+    xxl: {                                     // >= 2600px
+        0: { x: "0px",    z: -650, rotateY: 0  },
+        1: { x: "25vw",   z: -260,  rotateY: 46 },
+        2: { x: "40vw",   z: 370,  rotateY: 48 },
         3: { x: "1300px", z: 400,  rotateY: 34 },
     },
 };
 
+// MARK: init 
+renderProjects(); 
+
+// MARK: Rendering gallery
 function panelOffset(index) {  
     let difference = activeProject - index;     
     if(difference > half) difference -= totalProjects; 
@@ -50,14 +60,15 @@ function renderProjects() {
         const offset = panelOffset(index);
 
         if (index == activeProject) {
-            projectTitle.textContent = project.alt; 
+            projectTitle.textContent = project.dataset.name; 
         }
 
         // Pick layout based on screen width
         const width = window.innerWidth; 
         let projectsLayout; 
         
-        if(width >= 2200) projectsLayout = layouts.xl;
+        if(width >= 2600) projectsLayout = layouts.xxl;
+        else if(width >= 2200) projectsLayout = layouts.xl;
         else if(width >= 1200) projectsLayout = layouts.lg;
         else if(width >= 768)  projectsLayout = layouts.md;
         else if(width >= 480)  projectsLayout = layouts.sm;

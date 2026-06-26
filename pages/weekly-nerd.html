@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Nerd</title>
+
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <main>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger"><span></span></label>
+        
+        <nav>
+            <ul>
+                <li><a  href="../index.html">Projecten</a></li>
+                <li><a href="./reflectie.html">Reflectie</a></li>
+                <li><a class="active-page" href="./weekly-nerd.html">Weekly Nerd</a></li>
+            </ul>
+            <div>
+                <input type="checkbox" id="theme">
+                <label for="theme"></label>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <h1>Weekly Nerd</h1>
+            <p>...</p>
+        </section>
+
+        <section class="spreker">
+            <span>01</span>
+            <div>
+                <h2>Peter-Paul Koch</h2>
+                <p>Peter-Paul Koch gaf een presentatie over hoe browsers werken, waarom ze zich soms onvoorspelbaar gedragen en hoe je als ontwikkelaar hiermee moet omgaan. Zijn verhaal richtte zich op de onderliggende technologie van browsers, het belang van eenvoud, en het belang van betrouwbare ondersteuning tussen verschillende browsers engines. </p>
+
+                <div>
+                    <p>Waar bestaat een browser uit: 
+                        <ul>
+                            <li>Html</li>
+                            <li>Css</li>
+                            <li>Dom</li>
+                            <li>Aom</li>
+                            <li>Interface</li>
+                            <li>Javascript engine: verschilt per browser</li>
+                        </ul>
+                    </p>
+                </div>
+
+                <p>De layout van een pagina bepaald hoe de pagina eruit ziet. En veranderingen van een layout is juist het gene wat de browser veel moeite kost, dus als je dingen zoals media queries gebruikt is het goed om naar andere manieren te kijken dan de layout als eerste aan te passen. En niet alleen voor de browser, maar ook de gebruiker. </p>
+
+                <p>Core vs. DOM
+                Core: maakt JavaScript een programmeertaal.
+                DOM: zorgt ervoor dat JavaScript kan praten met HTML-elementen.</p>
+
+
+                <p>Backward compatibility. Browsers dragen een enorme last: alles dat ooit heeft gewerkt, moet blijven werken. Koch gaf als voorbeeld dat het weglaten van een DOCTYPE ervoor zorgt dat de browser terugvalt naar oude render-modi, vergelijkbaar met Internet Explorer 6.</p>
+
+                <p>Geschiedenis van het web: Www broswer (1990) - herbouwd in 2019, Mosaic 1993, Netacape 1994, Ie 1995 - gratis, Opera 1995 - tegenwordig niet meer gebruikelijk, Ie 5 mac 2000, Konqueror 2000, (tot nu toe belangrijskte) -> safari, 2003(met renderinf engine van konqueror), Firefox 2004 (zelfde als netscape4), Safari ios 2007 (eerste mobiele browser die serius werd genomen), Chrome 2008, Flow 2020, Ladybird 2024.</p>
+
+                <p>Kernboodschap<br>Hou het simpel, browsers verschillen veel van elkaar en in versies, eenvoudige oplossingen werken het betrouwbaarst en blijven het langst bruikbaar.</p>
+            </div>
+        </section>
+
+        <section class="spreker">
+            <span>02</span>
+            <div>
+                <h2>Nils Binder</h2>
+                <p>Nils Binder sprak over creatieve mogelijkheden binnen CSS en hoe moderne technieken nieuwe manieren bieden om ontwerp en interactie te benaderen. Hij koppelde dit aan zijn ervaring bij 9-elements. </p>
+                <div><p>Design vs. webdesign
+                    <ul>
+                        <li>Vroeger kon Photoshop veel meer dan het web; nu loopt het web juist voorop in designmogelijkheden.</li>
+                        <li>Denk niet in pixels, maar in relaties tussen elementen – zoals je ook in Figma werkt.</li>
+                    </ul>
+                </p></div>
+                <div><p>Ook heeft Nils wat van zijn eigen toepassingen laten zien, die interessant waren: 
+                    <ul>
+                        <li>Stop-motion animatie met CSS (bijv. steps(31, end)): een lange strip afbeeldingen in plaats van video.</li>
+                        <li>Blend modes zoals difference voor experimentele visuele effecten.</li>
+                        <li>Subgrid voor complexere layoutstructuren.</li>
+                        <li>First-line selector voor typografische accenten.</li>
+                    </ul>
+                </p></div>
+                <p>Gebruik van AI in Nils zijn design: AI werkt vooral met patronen uit het verleden. Innovatieve of experimentele CSS-technieken zijn daardoor vaak dingen waarbij AI minder goed kan helpen.</p>
+            </div>
+        </section>
+        
+        <section class="spreker">
+            <span>03</span>
+            <div>
+                <h2>Robbert Broersma + Yolijn van der Kolk</h2>
+                <p>Robbert en Yolijn gaven een presentatie over het NL Design System en de richtlijnen voor toegankelijke overheidssites. De nadruk lag op gebruiksvriendelijke, duidelijke en inclusieve formulieren. </p>
+                <div><p>
+                    Opbouw van een goed formulier
+                    <ul>
+                        <li>Begin met introductietekst.</li>
+                        <li>Vraag alleen noodzakelijke informatie.</li>
+                        <li>Laat gebruikers voor verzending hun gegevens controleren en wijzigen.</li>
+                        <li>Toon na het verzenden een duidelijke bevestiging + overzicht van eventuele fouten.</li>
+                    </ul>
+                </p></div>
+                <div><p>
+                    Belangrijke toegankelijkheid principes
+                    <ul>
+                        <li>Gebruik heldere labels, altijd gekoppeld via for="".</li>
+                        <li>Schrijf zichtbaar of een veld verplicht of optioneel is (niet alleen met een *).</li>
+                        <li>Foutmeldingen moeten bij het betreffende veld staan.</li>
+                        <li>Nooit alleen kleur gebruiken om fouten aan te geven.</li>
+                        <li>Volgorde voor screenreaders: label → beschrijving → foutmelding → invoerveld.</li>
+                    </ul>
+                </p></div>
+                <div><p>
+                    Design Componenten
+                    <ul>
+                        <li>Voldoende kleurcontrast.</li>
+                        <li>Componenten moeten groot genoeg zijn: 44 × 44 px.</li>
+                        <li>Buttons staan voor aan het einde van een regel (dus links), niet helemaal rechts.</li>
+                    </ul>
+                </p></div>
+                <div><p>
+                    Validatie & feedback
+                    <ul>
+                        <li>Geef vooraf duidelijk aan welke invoerregels gelden.</li>
+                        <li>Foutmeldingen onderbreken niet, maar worden wel automatisch voorgelezen.</li>
+                        <li>Op de controlepagina moeten ingevoerde gegevens niet automatisch vertaald worden. Gebruik bijv. translate="no".</li>
+                    </ul>
+                </p></div>
+                <p><span>Kernboodschap</span><br>Een formulier moet voor iedereen en alles toegankelijk zijn. Hier komt meer bij kijken dan je eerst denk, maar met de guidelines die er nu zijn kom je een heel eind.</p>
+            </div>
+        </section>
+
+        <section class="spreker">
+            <span>04</span>
+            <div>
+                <h2>Rosa</h2>
+                <p>Rosa gaf een inspirerende lezing over hacking als middel tegen planned obsolescence (geplande veroudering) en hoe je op een duurzame manier met technologie kunt omgaan. </p>
+                <div><p>
+                    <ul>
+                        <li>Producten zijn zo ontworpen dat ze snel kapot gaan of niet te repareren zijn.</li>
+                        <li>Dit vergroot de afhankelijkheid van consumenten.</li>
+                        <li>Ook producenten én de overheid houden deze cyclus in stand.</li>
+                    </ul>
+                </p></div>
+                <div><p>
+                    <ul>
+                        <li>Ze bouwde een travelling server met een Arduino en een zonnepaneel.</li>
+                        <li>Een server is in essentie niet meer dan een computer + een router.</li>
+                    </ul>
+                </p></div>
+                <div><p>
+                    <ul>
+                        <li>Oudere hardware dwingt je om efficiënter te denken.</li>
+                        <li>Het zet vraagtekens bij de toekomstbestendigheid van moderne websites.</li>
+                        <li>Staat je website er over tien jaar nog?</li>
+                    </ul>
+                </p></div>
+                <p>
+                    <span>Kernboodschap</span><br>Ik denk dat Rose echt heeft laten zien dat je heel anders met technologie om kan gaan. En dat hacken misschien niet perse is zoals ik dacht dat het was, maar het gaat veel meer om experimenteren en om obstakels heen werken. 
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

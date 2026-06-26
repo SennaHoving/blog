@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    font-family: "inter";
+    margin: 0; 
+}
+
+nav {
+    padding: 2em clamp(24px,6vw,120px); 
+}
+
+nav a {
+    text-decoration: none;
+    color: black; 
+}
+
+h1 {
+    font-family: 'syne';
+    font-size: 6em; 
+}
+
+section {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: clamp(56px,8vw,110px) clamp(24px,6vw,120px);
+}
+
+h2 {
+    font-size: 1.2em; 
+    font-family: "syne"; 
+    line-height: 1.7;
+}
+
+.hero {
+    max-width: max-content; 
+    margin: 0; 
+}
+
+.hero h1 {
+    margin: 0; 
+}
+
+.hero p {
+    font-size: 2em; 
+    color: grey; 
+    max-width: 30vw; 
+}
+
+.intro img {
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.intro > div {
+    padding: 4em 0; 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5); 
+    display: flex; 
+    flex-direction: row; 
+    gap: 3em; 
+}
+
+.intro > div div {
+    display: flex; 
+    flex-direction: column;
+}
+
+.intro > div div p:first-of-type {
+    opacity: 0.5;
+}
+
+.intro > div div p:last-of-type {
+    font-size: 1em; 
+}
+
+/* MARK: content */ 
+section:nth-of-type(3) {
+    display: flex; 
+    flex-direction: column;
+    gap: 4em; 
+}
+
+section:nth-of-type(3) > div {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+}
+
+section:nth-of-type(3) div p {
+    font-size: 1.2em; 
+    line-height: 1.7;
+}
+
+section:nth-of-type(3) div div {
+    grid-area: 1 / 2 / 2 / 3;  
+}
+
+/* MARK: footer */ 
+footer {
+    display: flex; 
+    flex-direction: row; 
+    margin: 0; 
+    padding: 0; 
+    border-top: 1px solid grey; 
+}
+
+footer a {
+    flex: 1;
+    text-decoration: none;
+    color: black; 
+    padding: clamp(56px,8vw,110px) clamp(24px,6vw,120px);
+
+    &:hover {
+        background-color:rgba(0, 0, 0, 0.1)
+    }
+}
+
+footer a:last-child {
+    border-left: 1px solid grey; 
+    display: flex;
+    flex-direction: column; 
+    align-items: end;
+}
+
+footer h3 {
+    font-family: "syne"; 
+    font-size: 2em; 
+    margin: 0; 
+}

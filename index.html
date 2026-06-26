@@ -9,29 +9,42 @@
 </head>
 <body>
     <main>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger"><span></span></label>
+
         <nav>
             <ul>
                 <li><a class="active-page" href="">Projecten</a></li>
-                <li><a href="">Reflectie</a></li>
-                <li><a href="">Leerdoelen</a></li>
+                <li><a href="./pages/reflectie.html">Reflectie</a></li>
+                <li><a href="./pages/weekly-nerd.html">Weekly Nerd</a></li>
             </ul>
+            <div>
+                <input type="checkbox" id="theme">
+                <label for="theme"></label>
+            </div>
         </nav>
 
-        <div>
+        <!-- <div>
             <h1>Senna Hoving</h1>
             <p>Meesterschaps Blog</p>
-        </div>
+        </div> --> 
 
         <section class="gallery">
             <h2>Human Centered Design</h2>
             <div>
-                <img src="./assets/project0.png" alt="Sprint 0">
-                <img src="./assets/project1.png" alt="Browser Tech">
-                <img src="./assets/project2.png" alt="CSS">
-                <img class="active" src="./assets/project3.png" alt="Human Centered Design">
-                <img src="./assets/project4.png" alt="API">
-                <img src="./assets/hackathon.png" alt="Hackathon">
-                <img src="./assets/hackathon.png" alt="Ctrl-City">
+                <a data-name="Sprint 0"><img src="./assets/nul1.png" alt="Sprint 0"></a>
+                <a data-name="Browser Tech"><img src="./assets/bt.png" alt="Browser Tech"></a>
+                <a href="./pages/css.html" data-name="CSS">
+                    <img class="dark-mode" src="./assets/css-light.png" alt="CSS">
+                    <img class="light-mode" src="./assets/css-dark.png" alt="CSS">
+                </a>
+                <a data-name="Human Centered Design"><img src="./assets/hcd.png" alt="Human Centered Design"></a>
+                <a data-name="API"><img src="./assets/api.png" alt="API"></a>
+                <a data-name="Hackathon"><img src="./assets/hackathon.png" alt="Hackathon"></a>
+                <a data-name="Ctrl City">
+                    <img class="dark-mode" src="./assets/tool-light.png" alt="Ctrl-City">
+                    <img class="light-mode" src="./assets/tool-dark.png" alt="Ctrl-City">
+                </a>
             </div>
         </section>
 
