@@ -11,15 +11,17 @@
 
     --color-primary: white; 
     --color-secondary: #1a1a1a; 
-    --color-accent: red;
+    --color-accent: #2540FF; 
     --color-shadow: rgba(0,0,0,.45); 
 }
 
-:root:has(#theme:checked) {
-    --color-primary: #1a1a1a;
-    --color-secondary: white;
-    --color-accent: red;
-    --color-shadow: rgba(255,255,255,.45); 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-primary: #1a1a1a;
+        --color-secondary: white;
+        --color-accent: #2540FF; 
+        --color-shadow: rgba(255,255,255,.45);
+    }
 }
 
 body {
@@ -31,6 +33,7 @@ body {
 body {
     padding: 0; 
     margin: 0; 
+    overflow-x: hidden; 
 
     &:has(.gallery) {
         overflow: hidden; 
@@ -263,6 +266,7 @@ body main > div h1, body main > div p {
 
     font-family: "syne";
     font-size: 2.5em;
+    user-select: none;
 
     @media (max-width: 768px)  {
         font-size: 1.75em; 
@@ -431,7 +435,16 @@ body:has(#theme:checked) .dark-mode {
 /* MARK: reflectie */ 
 .reflectie {
     max-width: 1100px;
-    margin: clamp(56px,9vw,120px) auto 0;
+    margin: clamp(56px,9vw,120px) auto;
+    /* padding: clamp(24px,6vw,120px);  */
+
+    display: flex; 
+    flex-direction: column; 
+    gap: 3rem; 
+
+    @media (max-width: 1100px) {
+        margin: clamp(56px,9vw,120px) clamp(24px,6vw,120px);
+    }
 }
 
 body main:has(.reflectie) > section:nth-of-type(2) {
@@ -443,6 +456,11 @@ body main:has(.reflectie) > section:nth-of-type(2) {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 1em; 
+
+    @media (max-width: 768px) {     
+        grid-template-columns: 1fr; 
+        grid-template-rows: repeat(3,1fr)
+    }
 }
 
 .reflectie > div:first-of-type > div span {
@@ -465,6 +483,17 @@ body main:has(.reflectie) > section:nth-of-type(2) {
     display: grid;
     grid-template-columns: 200px 1fr;
     gap: clamp(24px,5vw,80px);
+    position: relative; 
+
+    @media (max-width: 1200px) {
+        margin: clamp(56px,9vw,120px) clamp(24px,6vw,120px);
+        grid-template-columns: 100px 1fr;
+    }
+
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr; 
+        grid-template-rows: 100px 1fr; 
+    }
 }
 
 .spreker > span {
@@ -472,6 +501,9 @@ body main:has(.reflectie) > section:nth-of-type(2) {
     margin-bottom: 0.5em; 
     font-size: 1.5em; 
     font-weight: 800; 
+    position: sticky; 
+    height: min-content; 
+    top: 0; 
 }
 
 .spreker h2 {

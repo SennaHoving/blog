@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint 0</title>
+
+    <link rel="stylesheet" href="../styles/detail.css">
+</head>
+<body data-project="sprint-0">
+    <nav>
+        <a href="../index.html">
+            <svg width="18" height="12" viewBox="0 0 18 12" fill="none"><path d="M6 1 1 6l5 5M1 6h16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Projecten
+        </a>
+    </nav>
+
+    <section class="hero">
+        <h1>Sprint 0</h1>
+        <p>Een introductie project om te kijken hoe ver ik sta</p>
+        <div>
+            <a href="https://sennahoving.github.io/Web-Design-Development/">Live demo <svg class="arrow" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M3 10 10 3M4 3h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a href="https://github.com/SennaHoving/Web-Design-Development">Github repo <svg class="arrow" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M3 10 10 3M4 3h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+    </section>
+
+    <section class="intro">
+        <img src="../assets/nul1.png" alt="Sprint 0">
+        <div>
+            <div>
+                <p>Vak</p>
+                <p>Sprint 0</p>
+            </div>
+            <div>
+                <p>Tools</p>
+                <p>HTML, CSS, JavaScript</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h2>Het project</h2>
+            <div>
+                <p>In deze sprint heb ik een pagina gemaakt waarin SVG-tekeningen zich lijken te tekenen terwijl je scrollt, in een doorlopend 'single line'-effect. De animatie reageert op hoe ver je de sectie in bent gescrold, en de pagina haalt content op uit een API. Het concept combineerde een hybride scroll-ervaring met die scroll-gestuurde tekeningen.</p>
+            </div>
+        </div>
+
+        <div>
+            <h2>Proces</h2>
+            <div>
+                <p>Ik ben begonnen met het ophalen van data uit de API en het opzetten van mijn leerdoelen, en heb daarna relatief lang aan het concept gewerkt. Dat hybride scrollen bleek best lastig. De kern van het project zit in de scroll-animatie: op basis van de scrollprogressie binnen de sectie bereken ik per pad de strokeDashoffset, zodat de lijnen zich precies op het juiste moment 'tekenen'. Daarbij heb ik gelet op responsiveness en een light/dark mode. Uit de code review haalde ik nog punten over consistentie in mijn JavaScript, structuur en het koppelen van root-styles.</p>
+            </div>
+        </div>
+
+        <div>
+            <h2>Reflectie</h2>
+            <div>
+                <p>Ik ben uiteindelijk minder ver gekomen dan ik had gewild, maar ik denk dat het goed was dat ik langer op het concept ben blijven hangen. Daardoor zat ik net iets meer buiten mijn comfortzone, wat precies aansloot op een van mijn leerdoelen. Het is iets waar ik normaal niet snel aan was begonnen omdat ik twijfelde of ik het kon, maar het lag net niet zó ver dat het onhaalbaar leek. De coole onderdelen zijn goed gelukt; met meer tijd had ik wat lege delen van de pagina nog willen aankleden met detail, waar de pagina nog flink op vooruit zou gaan.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <a id="previous-project">
+            <p>
+                &larr;
+                Vorige project
+            </p>
+            <h3></h3>
+        </a>
+        <a id="next-project">
+            <p>
+                Volgende project
+                &rarr;
+            </p>
+            <h3></h3>
+        </a>
+    </footer>
+
+    <script src="../scripts/project.js"></script>
+</body>
+</html>

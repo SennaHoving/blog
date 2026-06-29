@@ -17,7 +17,11 @@
 
     <section class="hero">
         <h1>CSS</h1>
-        <p>Een Rubik’s kubus die volledig in de browser leeft — gebouwd om te onderzoeken hoe mensen 3D-ruimte begrijpen met alleen muis en toets.</p>
+        <p>Een Rubik’s kubus die volledig in met CSS is opgebouwd</p>
+        <div>
+            <a href="https://sennahoving.github.io/CSS">Live demo <svg class="arrow" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M3 10 10 3M4 3h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a href="https://github.com/SennaHoving/CSS">Github repo <svg class="arrow" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M3 10 10 3M4 3h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
     </section>
 
     <section class="intro">
@@ -38,25 +42,23 @@
         <div>
             <h2>Het project</h2>
             <div>
-                <p>Bij dit project was het de opdracht om een volledig werkende rubiks kubus na te maken op het web. En dit exclusief in html en css. Tijdens dit project kwam de 3d aspecten van het web / css veel naar voren.</p>
+                <p>Voor het CSS-eindproject heb ik een 3D Rubik's kubus gemaakt met pure CSS, zonder JavaScript. De kubus voert een volledig Rubik's-algoritme uit in een eindeloze loop, opgebouwd uit losse blokjes die om het midden draaien. Daarnaast heb ik een 'hyper'-variant gemaakt: een alternatieve theming die met een visueel effect over de zijkanten heen speelt. De techniek leunt op 3D transforms, perspective, rotates en custom properties.</p>
             </div>
         </div>
 
         <div>
             <h2>Proces</h2>
             <div>
-                <p>Kubus begon als een simpele vraag: kun je een fysiek, tactiel object zoals een Rubik’s kubus net zo intuïtief laten aanvoelen op een plat scherm? De meeste online varianten dwingen je in knoppen en menu’s; ik wilde dat draaien aan een zijde net zo vanzelfsprekend zou zijn als in je handen.
+                <p>Na een introductie rond de :has()-selector ben ik begonnen met één enkele kubus, opgebouwd met behulp van bronnen over 3D in CSS. Daar maakte ik acht blokjes van die ik netjes om een centraal punt plaatste, waarna ik de eerste draai animeerde met keyframes en @property. Al snel bleek dat een volledig dynamische, willekeurig draaibare kubus niet haalbaar is in alleen CSS.
 
-                Het resultaat is een kubus die je vrij kunt roteren en oplossen, met drie modi — classic, hyper en spin — die elk een ander gevoel van controle geven. Vervang deze alinea’s door je eigen tekst; de opmaak schaalt mee.</p>
+                In plaats daarvan koos ik ervoor om een vast algoritme uit te werken (R U F L D B B' D' L' F' U' R') als doorlopende animatie. Dat dwong me om dubbele rotates te stacken en alle transforms direct in de keyframes te zetten, omdat de variabelen daar niet meer mee om konden gaan. Later experimenteerde ik met container style queries voor de theming van het hyper-effect, en met CSS nesting om de individuele blokjes overzichtelijker te positioneren.</p>
             </div>
         </div>
 
         <div>
             <h2>Reflectie</h2>
             <div>
-                <p>Kubus begon als een simpele vraag: kun je een fysiek, tactiel object zoals een Rubik’s kubus net zo intuïtief laten aanvoelen op een plat scherm? De meeste online varianten dwingen je in knoppen en menu’s; ik wilde dat draaien aan een zijde net zo vanzelfsprekend zou zijn als in je handen.
-
-                Het resultaat is een kubus die je vrij kunt roteren en oplossen, met drie modi — classic, hyper en spin — die elk een ander gevoel van controle geven. Vervang deze alinea’s door je eigen tekst; de opmaak schaalt mee.</p>
+                <p>Aan het begin had ik geen idee of dit haalbaar was, dus ik ben tevreden dat het uiteindelijk gelukt is. Ik ben het meest trots op de keyframes — dat was flink puzzelen — en op het hyper-effect, dat ondanks relatief simpele code precies de sfeer creëerde die ik zocht. Wat niet gelukt is, is de 'squeeze' die ontstaat in de zesde en zevende draai, waar de blokjes niet meer netjes om het centrum draaien. Dat had ik met meer tijd nog willen oplossen. Verder zou ik deze transform- en rotatekennis graag toepassen buiten een Rubik's kubus, bijvoorbeeld in 'echte' websites. CSS nesting neem ik sowieso mee: het maakt het schrijven van componenten voor mij veel logischer en overzichtelijker.</p>
             </div>
         </div>
     </section>

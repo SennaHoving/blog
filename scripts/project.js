@@ -4,7 +4,7 @@ const currentBody = document.querySelector("body");
 
 const projects = [
     {name: "sprint-0", link: "css.html"}, 
-    {name: "browser-tech", link: "css.html"}, 
+    {name: "browser-tech", link: "bt.html"}, 
     {name: "css", link: "css.html"}, 
     {name: "human-centered-design", link: "css.html"}, 
     {name: "api", link: "css.html"}, 

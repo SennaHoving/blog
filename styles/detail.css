@@ -1,9 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+:root {
+    color-scheme: light dark;
+
+    --media-breakpoint-s: 480px; 
+    --media-breakpoint-m: 768px; 
+    --media-breakpoint-l: 1200px; 
+    --media-breakpoint-xl: 1440px;
+
+    --color-primary: white; 
+    --color-secondary: #1a1a1a; 
+    --color-accent: #2540FF; 
+    --color-shadow: rgba(0,0,0,.45); 
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-primary: #1a1a1a;
+        --color-secondary: white;
+        --color-accent: #2540FF; 
+        --color-shadow: rgba(255,255,255,.45);
+    }
+}
+
 body {
     font-family: "inter";
     margin: 0; 
+    background-color: var(--color-primary); 
+    color: var(--color-secondary); 
 }
 
 nav {
@@ -12,7 +37,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: black; 
+    color: var(--color-secondary);  
 }
 
 h1 {
@@ -45,11 +70,33 @@ h2 {
     font-size: 2em; 
     color: grey; 
     max-width: 30vw; 
+    margin-bottom: 3rem; 
+}
+
+.hero div {
+    display: flex; 
+    gap: 1rem; 
+}
+
+.hero div a {
+    padding: 1em; 
+    background-color: var(--color-secondary); 
+    border-radius: 99em; 
+    text-decoration: none;
+    color: var(--color-primary); 
+
+    &:last-of-type {
+        background-color: var(--color-primary); 
+        color: var(--color-secondary); 
+        border: 1px solid var(--color-secondary); 
+    }
 }
 
 .intro img {
     max-width: 1040px;
+    width: 100%; 
     margin: 0 auto;
+    object-fit: contain;
 }
 
 .intro > div {
@@ -57,7 +104,7 @@ h2 {
     border-bottom: 1px solid rgba(0, 0, 0, 0.5); 
     display: flex; 
     flex-direction: row; 
-    gap: 3em; 
+    gap: 3rem; 
 }
 
 .intro > div div {
@@ -83,6 +130,11 @@ section:nth-of-type(3) {
 section:nth-of-type(3) > div {
     display: grid;
     grid-template-columns: 2fr 5fr;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto 1fr; 
+    }
 }
 
 section:nth-of-type(3) div p {
@@ -92,6 +144,10 @@ section:nth-of-type(3) div p {
 
 section:nth-of-type(3) div div {
     grid-area: 1 / 2 / 2 / 3;  
+
+    @media (max-width: 768px) {
+        grid-area: 2 / 1 / 3 / 2;  
+    }
 }
 
 /* MARK: footer */ 
@@ -106,7 +162,7 @@ footer {
 footer a {
     flex: 1;
     text-decoration: none;
-    color: black; 
+    color: var(--color-secondary); 
     padding: clamp(56px,8vw,110px) clamp(24px,6vw,120px);
 
     &:hover {

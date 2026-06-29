@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Tech</title>
+
+    <link rel="stylesheet" href="../styles/detail.css">
+</head>
+<body data-project="browser-tech">
+    <nav>
+        <a href="../index.html">
+            <svg width="18" height="12" viewBox="0 0 18 12" fill="none"><path d="M6 1 1 6l5 5M1 6h16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Projecten
+        </a>
+    </nav>
+
+    <section class="hero">
+        <h1>Browser Tech</h1>
+        <p>Een toegankelijk formulier dat ook zonder JavaScript werkt</p>
+        <div>
+            <a href="https://sennahoving.github.io/BT/">Live demo <svg class="arrow" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M3 10 10 3M4 3h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a href="https://github.com/SennaHoving/BT">Github repo <svg class="arrow" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M3 10 10 3M4 3h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+    </section>
+
+    <section class="intro">
+        <img src="../assets/bt.png" alt="Browser Tech">
+        <div>
+            <div>
+                <p>Vak</p>
+                <p>Browser Tech</p>
+            </div>
+            <div>
+                <p>Tools</p>
+                <p>HTML, CSS</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h2>Het project</h2>
+            <div>
+                <p>Voor Browser Tech heb ik een toegankelijk webformulier gebouwd in de stijl van de NS. De uitdaging was niet zozeer om een formulier te maken dat werkt, maar om een formulier te maken dat prettig werkt voor de persoon die er achter zit. Met progressive disclosure laat ik alleen de velden zien die op dat moment relevant zijn, waardoor het formulier korter oogt dan het in werkelijkheid is. Velden worden gevalideerd, ingevulde gegevens worden opgeslagen in localStorage, en het formulier blijft bruikbaar wanneer JavaScript wegvalt.</p>
+            </div>
+        </div>
+
+        <div>
+            <h2>Proces</h2>
+            <div>
+                <p>Ik ben begonnen met de HTML en de basis van forms: fieldsets, legends en de verschillende inputtypes. Daarna heb ik validatie toegevoegd op de invoervelden (een BSN accepteert alleen cijfers, naamvelden alleen letters) en een systeem om verkrijgers dynamisch toe te voegen en weer te verwijderen. Dat genereren van elementen in JavaScript heb ik later opgeschoond met het template-element, wat de code een stuk leesbaarder maakte.
+
+                Een belangrijk keerpunt was een gesprek met Rijk van Zanten. De vraag verschoof van "hoe los ik dit op?" naar "wie zit hier achter de computer en hoe vult diegene zo'n formulier in?". Daardoor heb ik de oorspronkelijke show/hide-aanpak vervangen door een 'vergrijzing' van velden die overgeslagen kunnen worden — zo blijft de structuur ook zonder JavaScript intact. In de styling leunde ik veel op :has() en op de stylingguide van de NS, en aan het eind heb ik me gericht op toegankelijkheid met custom errors, aria-describedby en screenreaders.</p>
+            </div>
+        </div>
+
+        <div>
+            <h2>Reflectie</h2>
+            <div>
+                <p>Dit project heeft me forms écht leren begrijpen, van validatie tot toegankelijkheid en progressive enhancement. De grootste les zat niet in de techniek maar in de mindset: eerst nadenken over het probleem en de gebruiker, en pas daarna over de oplossing. Dat inzicht zorgde ervoor dat ik de helft van mijn aanpak durfde om te gooien, en het eindresultaat werd er beter van. Een formulier dat ook zonder JavaScript blijft werken voelt nu vanzelfsprekend, terwijl ik daar aan het begin niet eens bij stilstond.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <a id="previous-project">
+            <p>
+                &larr;
+                Vorige project
+            </p>
+            <h3></h3>
+        </a>
+        <a id="next-project">
+            <p>
+                Volgende project
+                &rarr;
+            </p>
+            <h3></h3>
+        </a>
+    </footer>
+
+    <script src="../scripts/project.js"></script>
+</body>
+</html>

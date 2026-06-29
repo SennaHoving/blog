@@ -90,6 +90,7 @@ function renderProjects() {
 
 let isLocked = false; 
 
+// Scroll on mouse wheel 
 window.addEventListener("wheel", (event) => {
     if(isLocked) return; 
     isLocked = true; 
@@ -104,6 +105,31 @@ window.addEventListener("wheel", (event) => {
 
     setTimeout(() => isLocked = false, 500);   // unlock after 500ms
 })
+
+// Scroll on swipe 
+let touchStartX = null;
+
+window.addEventListener("touchstart", (event) => {
+    touchStartX = event.touches[0].clientX;
+});
+
+window.addEventListener("touchend", (event) => {
+    if (touchStartX === null) return;
+
+    const touchEndX = event.changedTouches[0].clientX;
+    const swipe = touchEndX - touchStartX;        // + = swiped right, - = swiped left
+
+    if (Math.abs(swipe) > 50) {                   // ignore tiny taps/jitter
+        if (swipe < 0) {
+            activeProject = (activeProject + 1) % totalProjects;            // swipe left -> forward
+        } else {
+            activeProject = (activeProject - 1 + totalProjects) % totalProjects;  // swipe right -> back
+        }
+        renderProjects();
+    }
+
+    touchStartX = null;
+});
 
 window.addEventListener("resize", () => {
     renderProjects();

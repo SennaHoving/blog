@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+
+    <link rel="stylesheet" href="../styles/detail.css">
+</head>
+<body data-project="api">
+    <nav>
+        <a href="../index.html">
+            <svg width="18" height="12" viewBox="0 0 18 12" fill="none"><path d="M6 1 1 6l5 5M1 6h16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Projecten
+        </a>
+    </nav>
+
+    <section class="hero">
+        <h1>API</h1>
+        <p>Een workout tracker in Astro, gebouwd met de Wger-API</p>
+        <div>
+            <a href="https://sennahoving.github.io/CSS">Live demo <svg class="arrow" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M3 10 10 3M4 3h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a href="https://github.com/SennaHoving/CSS">Github repo <svg class="arrow" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M3 10 10 3M4 3h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+    </section>
+
+    <section class="intro">
+        <img src="../assets/api.png" alt="CSS">
+        <div>
+            <div>
+                <p>Vak</p>
+                <p>API</p>
+            </div>
+            <div>
+                <p>Tools</p>
+                <p>Astro</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h2>Het project</h2>
+            <div>
+                <p>Voor het vak API heb ik een workout tracker gebouwd in Astro, server-side gerenderd en live gezet. De app gebruikt de Wger content-API voor oefeningen, en daarnaast de drag & drop- en localStorage-web-API's. Gebruikers kunnen door alle oefeningen bladeren en op een detailpagina meer informatie zien, zoals beschrijving en benodigd materiaal. Daarnaast kunnen ze een workout samenstellen door oefeningen erin te slepen, sets en gewicht toevoegen, en de workout opslaan om later terug te zien.</p>
+            </div>
+        </div>
+
+        <div>
+            <h2>Proces</h2>
+            <div>
+                <p>Ik ben begonnen met het opzetten van een Astro-project en het zoeken naar een passende content-API, waarbij ik onder andere crypto, sport en Spotify heb overwogen voordat ik op de Wger fitness-API uitkwam. Daarbij leerde ik het verschil tussen content- en web-API's en de voordelen van server-side rendering voor performance. Na het fetchen en weergeven van de oefeningen heb ik eerst een losse demo van de drag & drop-API gemaakt en die daarna in het project verwerkt.
+
+                Uit het voortgangsgesprek kwam dat het concept nog wat oppervlakkig was, dus heb ik het uitgebreid met sortering (via CSS order), categorieën, een delete-knop en een rustiger UX-ontwerp dat ik eerst in Figma heb uitgewerkt. Daarna heb ik de site live gezet via onRender en localStorage toegevoegd, zodat workouts bewaard blijven en op de homepagina terugkomen. Ook heb ik zoeken toegevoegd en de afbeeldingen per oefening op de overzichts- en detailpagina laten zien.</p>
+            </div>
+        </div>
+
+        <div>
+            <h2>Reflectie</h2>
+            <div>
+                <p>Ik heb uiteindelijk een werkende workout tracker neergezet met één content-API en twee web-API's, maar ik heb ook dingen laten liggen. Mijn planning was niet perfect en ik had mezelf op punten meer kunnen uitdagen. Ik had pas vrij laat in het project echt door hoe nuttig API's zijn voor het web en hoeveel er eigenlijk mee mogelijk is. De basis heb ik goed mee kunnen pakken, en het was waardevol om voor het eerst met API's te werken binnen de context van een echte website — dat neem ik mee naar volgende projecten.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <a id="previous-project">
+            <p>
+                &larr;
+                Vorige project
+            </p>
+            <h3></h3>
+        </a>
+        <a id="next-project">
+            <p>
+                Volgende project
+                &rarr;
+            </p>
+            <h3></h3>
+        </a>
+    </footer>
+
+    <script src="../scripts/project.js"></script>
+</body>
+</html>
