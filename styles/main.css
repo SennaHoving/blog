@@ -34,9 +34,9 @@ html, body {
     padding: 0; 
     margin: 0; 
     overflow-x: hidden; 
-    overscroll-behavior: none;
 
     &:has(.gallery) {
+        overscroll-behavior: none;
         overflow: hidden; 
         position: fixed; 
         inset: 0;

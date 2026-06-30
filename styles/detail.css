@@ -43,6 +43,14 @@ nav a {
 h1 {
     font-family: 'syne';
     font-size: 6em; 
+
+    @media (max-width: 768px)  {
+        font-size: 4em; 
+    }
+
+    @media (max-width: 480px)  {
+        font-size: 3em; 
+    }
 }
 
 section {
